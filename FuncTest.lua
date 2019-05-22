@@ -62,3 +62,41 @@ do
 
     foo(2,3,4,5)
 end
+
+print(string.format("%q", "one\ntwo"))
+
+-- 多维数组
+do
+    local array = {}
+    local maxRows = 3
+    local maxCols = 3
+    for row = 1, maxRows do
+        for col = 1, maxCols do
+            array[row * maxCols + col] = row * col
+        end
+    end
+    
+    for row = 1, maxRows do
+        for col = 1, maxCols do
+            print(array[row * maxCols + col])
+        end
+    end
+    
+    for i,v in pairs(array) do
+        print(i,v)
+    end 
+end
+
+-- 无状态迭代器
+do
+    local function square(itrMaxCount, curNumber)
+        if curNumber < itrMaxCount then
+            curNumber = curNumber + 1
+            return curNumber, curNumber * curNumber
+        end
+    end
+
+    for i, n in square,3,0 do
+        print(i, n)
+    end
+end
