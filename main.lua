@@ -1,4 +1,7 @@
-require("moduleAndPakage")
+package.path = "?;?.lua;"..package.path
+print(package.path)
 
-print(moduleAndPakage.constant)
-moduleAndPakage.func2()
+local module = require("moduleAndPakage")
+
+print(module.constant)
+module.func2()
