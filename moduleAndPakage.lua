@@ -1,7 +1,7 @@
 -- 定义名为module的模块
 moduleAndPakage = {}
 
--- 定义一个常亮
+-- 定义一个常量
 moduleAndPakage.constant = "这是一个常量"
 
 function moduleAndPakage.func()
